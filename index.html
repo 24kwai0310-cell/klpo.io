@@ -300,6 +300,56 @@ footer{border-top:1px solid rgba(255,255,255,0.08);}
 @media (max-width:1024px){.hero-grid{grid-template-columns:1fr;}.hero-card{order:-1;}}
 @media (max-width:768px){nav{padding:0 4%;}.nav-links{display:none;position:absolute;top:72px;left:4%;right:4%;padding:20px;flex-direction:column;gap:14px;}.nav-toggle{display:block;}.hero{padding:110px 4% 60px;}.hero-left{text-align:center;}.hero-actions{justify-content:center;}.hero-stats{grid-template-columns:repeat(2,1fr);}.about-grid,.contact-grid{grid-template-columns:1fr;}.projects-grid{grid-template-columns:1fr;}.video-grid{grid-template-columns:1fr;}.contact-grid{gap:40px;}}
 @media (max-width:480px){.hero{padding:90px 4% 50px;}.hero h1{font-size:clamp(34px,10vw,56px);}.hero-actions{flex-direction:column;}.hero-stats{grid-template-columns:1fr;}}
+
+  /* Bright theme overrides */
+  :root {
+    --bg: #f8fbff;
+    --bg2: #ffffff;
+    --bg3: #eef4ff;
+    --accent: #4d6eff;
+    --accent2: #70c2ff;
+    --text: #17233d;
+    --text2: #4b5563;
+    --text3: #6b7280;
+    --border: rgba(77,110,255,0.14);
+    --card: #fff;
+    --shadow: 0 26px 80px rgba(47,72,116,0.12);
+  }
+  body{background:linear-gradient(180deg,#f8fbff 0%,#eef4ff 45%,#dfe7f9 100%);color:var(--text);}
+  nav{background:rgba(255,255,255,0.92);border-color:var(--border);box-shadow:0 18px 40px rgba(47,72,116,0.08);}
+  .nav-logo{color:var(--accent);}
+  .nav-links a{color:var(--text3);}
+  .admin-btn{background:#fff;border:1px solid var(--border);color:var(--text);}
+  .hero{min-height:95vh;padding:120px 5% 80px;text-align:left;background:transparent;box-shadow:none;}
+  .hero::before,.hero::after{display:none;}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1200px;margin:0 auto;}
+  .hero-left{padding:32px 0;}
+  .hero-tag{background:#eef4ff;color:var(--accent);border:none;box-shadow:0 12px 40px rgba(77,110,255,0.08);}
+  .hero h1{font-size:clamp(42px,6vw,80px);color:var(--text);}
+  .hero-sub{max-width:560px;color:var(--text2);margin-bottom:30px;}
+  .hero-actions{margin-bottom:36px;}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 18px 45px rgba(77,110,255,0.18);}
+  .btn-secondary{background:#fff;color:var(--accent);border:1px solid rgba(77,110,255,0.18);}
+  .hero-card{background:#ffffff;border:1px solid rgba(77,110,255,0.12);border-radius:30px;box-shadow:var(--shadow);padding:36px;}
+  .hero-card h3{color:var(--accent);}
+  .hero-card p{color:var(--text2);}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px;}
+  .hero-stat{background:#f4f8ff;border:1px solid rgba(77,110,255,0.1);border-radius:20px;padding:18px;}
+  .hero-stat strong{color:var(--accent);}
+  section{background:transparent;}
+  #about,#projects,#gallery,#video,#contact{background:rgba(255,255,255,0.75);border:1px solid rgba(77,110,255,0.1);border-radius:28px;}
+  .about-grid,.contact-grid{gap:60px;}
+  .project-card{background:#ffffff;border:1px solid rgba(77,110,255,0.1);border-radius:24px;box-shadow:var(--shadow);}
+  .project-img-placeholder{background:#f4f8ff;}
+  .gallery-add{background:#f4f8ff;border-color:rgba(77,110,255,0.18);}
+  .gallery-item{border-color:rgba(77,110,255,0.1);}
+  .video-wrap{background:#f8fbff;border-color:rgba(77,110,255,0.12);}
+  .contact-link-icon{background:#f4f8ff;border-color:rgba(77,110,255,0.12);}
+  .form-input,.form-textarea{background:#f4f8ff;border-color:rgba(77,110,255,0.12);}
+  footer{background:transparent;border:none;}
+  @media(max-width:1024px){.hero-grid{grid-template-columns:1fr;}.hero-card{order:-1;}}
+  @media(max-width:768px){nav{padding:0 4%;}.nav-links{display:none;position:absolute;top:72px;left:4%;right:4%;padding:20px;flex-direction:column;gap:14px;}.nav-toggle{display:block;}.hero{padding:110px 4% 60px;}.hero-left{text-align:center;}.hero-actions{justify-content:center;}.hero-stats{grid-template-columns:repeat(2,1fr);}.about-grid,.contact-grid{grid-template-columns:1fr;}.projects-grid{grid-template-columns:1fr;}.video-grid{grid-template-columns:1fr;}.contact-grid{gap:40px;}}
+  @media(max-width:480px){.hero{padding:80px 4% 50px;}.hero h1{font-size:clamp(32px,10vw,52px);}.hero-actions{flex-direction:column;}.hero-stats{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -325,26 +375,26 @@ footer{border-top:1px solid rgba(255,255,255,0.08);}
 <section class="hero" id="home">
   <div class="hero-grid">
     <div class="hero-left">
-      <div class="hero-tag">Student Portfolio</div>
+      <div class="hero-tag">Bright Portfolio</div>
       <h1>안녕하세요, 저는 <em id="hero-name" data-editable>이은준</em>입니다.</h1>
-      <p class="hero-sub" id="hero-sub" data-editable>학습과 경험을 통해 성장을 기록하는 고등학생입니다. 문제 해결, 협업, 창의적 설계로 더 나은 내일을 준비합니다.</p>
+      <p class="hero-sub" id="hero-sub" data-editable>활동과 프로젝트를 통해 성장하는 모습을 밝고 산뜻한 스타일로 보여드립니다.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">프로젝트 보기</a>
-        <a href="#contact" class="btn-secondary">지금 연락하기</a>
+        <a href="#about" class="btn-primary">자기소개 보기</a>
+        <a href="#projects" class="btn-secondary">프로젝트 보기</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><strong>5+</strong><span>주요 활동 참여</span></div>
-        <div class="hero-stat"><strong>3</strong><span>완성 프로젝트</span></div>
-        <div class="hero-stat"><strong>1</strong><span>진행 중 영상</span></div>
+        <div class="hero-stat"><strong>5+</strong><span>교내외 활동</span></div>
+        <div class="hero-stat"><strong>4</strong><span>완료 프로젝트</span></div>
+        <div class="hero-stat"><strong>2</strong><span>영상 자료</span></div>
       </div>
     </div>
     <div class="hero-card">
-      <h3>포트폴리오 하이라이트</h3>
-      <p>자기소개, 활동, 프로젝트, 작품, 영상, 연락처를 한눈에 정리한 프레젠테이션형 포트폴리오입니다. 간결하면서도 무게감 있는 표현으로 정보를 전달합니다.</p>
+      <h3>새로운 포트폴리오 컨셉</h3>
+      <p>밝고 청명한 컬러로 구성된 페이지로, 주요 내용을 한눈에 확인할 수 있도록 깔끔하게 정리했습니다.</p>
       <div class="hero-stats">
-        <div class="hero-stat"><strong>학생회</strong><span>리더십과 기획 경험</span></div>
-        <div class="hero-stat"><strong>데이터</strong><span>분석 및 발표 역량</span></div>
-        <div class="hero-stat"><strong>콘텐츠</strong><span>영상 제작과 스토리텔링</span></div>
+        <div class="hero-stat"><strong>명확함</strong><span>직관적인 정보 배치</span></div>
+        <div class="hero-stat"><strong>가독성</strong><span>편안한 글꼴과 색 조합</span></div>
+        <div class="hero-stat"><strong>관리성</strong><span>관리자 로그인으로 손쉬운 수정</span></div>
       </div>
     </div>
   </div>
